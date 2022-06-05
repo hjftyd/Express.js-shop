@@ -5,7 +5,7 @@ const checkAuth = require('../middleware/checkAuth')
 
 
 router.get('/:id', checkAuth, cartController.getUserCart)
-router.post('/addToCart', cartController.addItemToCart)
-router.delete('/empty/:id', cartController.emptyCart)
+router.post('/addToCart', checkAuth, cartController.addItemToCart)
+router.delete('/empty/:id', checkAuth, cartController.emptyCart)
 
 module.exports = router
