@@ -1,7 +1,7 @@
 # Express.js-shop
 
-project setup
+# Project setup
 npm install
 
-server
+# Server
 npm start
