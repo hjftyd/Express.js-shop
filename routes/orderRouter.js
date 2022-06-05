@@ -5,5 +5,5 @@ const checkAuth = require('../middleware/checkAuth')
 
 router.post('/create', checkAuth, orderController.createOrder)
 router.delete('/delete/:id', checkAuth, orderController.deleteOrder)
-
+ 
 module.exports = router
