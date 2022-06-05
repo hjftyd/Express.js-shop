@@ -1,6 +1,7 @@
 const Router = require('express')
 const router = new Router
 const deliveryController = require('../controllers/deliveryController')
+const checkRole = require('../middleware/checkRole')
 
 router.get('/all', deliveryController.allDeliveries)
 router.get('/current/:id', deliveryController.currentDelivery)
