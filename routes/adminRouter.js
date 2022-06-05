@@ -10,5 +10,4 @@ router.delete('/delete/:id', checkRole('ADMIN'), adminController.delete)
 router.get('/userId/:id', checkRole('ADMIN'), adminController.userId)
 router.get('/users', checkRole('ADMIN'), adminController.users)
 
-
 module.exports = router
