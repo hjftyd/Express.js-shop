@@ -4,8 +4,8 @@ const deliveryController = require('../controllers/deliveryController')
 
 router.get('/all', deliveryController.allDeliveries)
 router.get('/current/:id', deliveryController.currentDelivery)
-router.post('/new', deliveryController.newDelivery)
-router.patch('/modify/:id', deliveryController.modifyDelivery)
-router.delete('/delete/:id', deliveryController.deleteDelivery)
+router.post('/new', checkRole('ADMIN'), deliveryController.newDelivery)
+router.patch('/modify/:id', checkRole('ADMIN'), deliveryController.modifyDelivery)
+router.delete('/delete/:id', checkRole('ADMIN'), deliveryController.deleteDelivery)
 
 module.exports = router
